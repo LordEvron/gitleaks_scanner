@@ -9,5 +9,7 @@ WORKDIR /go/gitleaks
 
 RUN make build
 
+RUN ln -s /go/gitleaks/gitleaks /bin/gitleaks
+
 # Run app.py when the container launches
-CMD ["./gitleaks"]
+CMD ["gitleaks"]
